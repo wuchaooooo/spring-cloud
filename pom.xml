@@ -14,8 +14,8 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <!-- 1.5.4会导致config模块启动报错，原因未知 -->
-        <version>1.5.0.RELEASE</version>
+        <!--1.5.2 1.5.3, 1.5.4会导致config模块启动报错(无法注册为eureka服务)，原因未知 -->
+        <version>1.5.1.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -37,6 +37,7 @@
         <module>spring-cloud-server1</module>
         <module>spring-cloud-server2</module>
         <module>spring-cloud-client1</module>
+        <module>spring-cloud-client1-cp</module>
         <module>spring-cloud-client2</module>
     </modules>
 

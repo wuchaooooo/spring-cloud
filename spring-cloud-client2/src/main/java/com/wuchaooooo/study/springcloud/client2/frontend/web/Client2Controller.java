@@ -1,6 +1,6 @@
-package com.wuchaooooo.study.springcloud.client2.web;
+package com.wuchaooooo.study.springcloud.client2.frontend.web;
 
-import com.wuchaooooo.study.springcloud.client2.service.Client1Service;
+import com.wuchaooooo.study.springcloud.client2.frontend.service.Client1Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
@@ -20,14 +20,10 @@ public class Client2Controller {
     @Autowired
     private Client1Service client1Service;
 
-    @RequestMapping(value = "/client")
-    @ResponseBody
-    public String index(@RequestParam String name) {
-        return "hi " + name + "I'm from port:" + port;
-    }
-
     @RequestMapping(value = "/client2")
     ResponseEntity<String> demo() {
         return client1Service.demo();
     }
+
+
 }
